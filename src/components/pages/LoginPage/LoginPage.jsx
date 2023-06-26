@@ -18,7 +18,7 @@ const LoginPage = () => {
     return <Navigate to="/contacts" />;
   }
   return (
-    <div>
+    <div className={css.container}>
       <h1 className={css.title}>Login</h1>
       <LoginForm onSubmit={handleLogin} />
     </div>

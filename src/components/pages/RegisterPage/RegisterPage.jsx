@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { isUserLogin } from 'redux/auth/auth-selectors';
 import { signup } from 'redux/auth/auth-operations';
 
-// import css from './registerPage.module.scss';
+import css from './registerPage.module.scss';
 
 const RegisterPage = () => {
   const isLogin = useSelector(isUserLogin);
@@ -18,7 +18,7 @@ const RegisterPage = () => {
     return <Navigate to="/contacts" />;
   }
   return (
-    <div>
+    <div className={css.container}>
       <h1>Registration</h1>
       <Registration onSubmit={handleSignup} />
     </div>
